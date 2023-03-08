@@ -65,12 +65,12 @@ ul li {
         color: #ffffff;
         font-weight: 400;
        margin-bottom: 15px;
-        line-height: 24px;
+        line-height: 24px; 
     }
 }
 html[dir="ltr"]{
     .newsletter .newsletter-text{
-        line-height: 1.7;
+        line-height: 1.5;
     }
 }
 
@@ -191,6 +191,11 @@ img{
 
 
 @include max-768 {
+    html[dir="ltr"]{
+        .newsletter .newsletter-text{
+            line-height: 1.4;
+        }
+    }
     .social-footer{
         margin-bottom: 0;
         justify-content: center;

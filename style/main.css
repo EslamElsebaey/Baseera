@@ -1825,7 +1825,7 @@ button.close i {
 }
 
 html[dir=ltr] .ques-text {
-  line-height: 1.7;
+  line-height: 1.45;
 }
 
 .ques-text-sec {
@@ -1847,6 +1847,10 @@ html[dir=ltr] .ques-text {
   color: #000000;
   font-weight: 400;
   text-align: start;
+}
+
+html[dir=ltr] .ques-answer {
+  line-height: 1.7;
 }
 
 .active-color-blue {
@@ -2306,6 +2310,61 @@ html[dir=ltr] .news-item .news-item-desc p {
             margin-inline-start: 20px;
   }
 }
+.breadcrumb-sec {
+  padding: 30px 0 40px 0;
+}
+
+.item-home::after {
+  content: " / ";
+  padding: 0 5px;
+  color: #808080;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.bread-link {
+  transition: all linear 0.2s;
+}
+.bread-link:hover {
+  color: #18778d;
+}
+
+ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li {
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+  font-size: 12px;
+  color: #808080;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-banner figure {
+  margin: 0;
+}
+.about-banner figure img {
+  width: 100%;
+}
+
+.about-common-questions .ques-num {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 991px) {
+  .breadcrumb-sec {
+    padding: 20px 0 25px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .breadcrumb-sec {
+    padding: 10px 0 15px 0;
+  }
+}
 footer {
   padding: 55px 0 40px 0;
   background-color: #18778d;
@@ -2371,7 +2430,7 @@ html[dir=ltr] .message input {
 }
 
 html[dir=ltr] .newsletter .newsletter-text {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .message {
@@ -2483,6 +2542,9 @@ html[dir=ltr] .send i {
 }
 
 @media only screen and (max-width: 767px) {
+  html[dir=ltr] .newsletter .newsletter-text {
+    line-height: 1.4;
+  }
   .social-footer {
     margin-bottom: 0;
     justify-content: center;

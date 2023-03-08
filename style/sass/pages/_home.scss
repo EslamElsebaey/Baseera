@@ -846,7 +846,7 @@ align-items: center;
 }
 html[dir="ltr"]{
     .ques-text{
-        line-height: 1.7;
+        line-height: 1.45;
     }
 }
 .ques-text-sec{
@@ -867,6 +867,11 @@ html[dir="ltr"]{
     color: #000000;
     font-weight: 400;
     text-align: start;
+}
+html[dir="ltr"]{
+    .ques-answer{
+        line-height: 1.7;
+    }
 }
 .active-color-blue {
     color: #18778d !important;
