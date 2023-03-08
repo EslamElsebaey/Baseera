@@ -131,17 +131,13 @@ if($(window).width()  < 768 ) {
     observeParents: true,
     breakpoints: {
       350: {
-        slidesPerView: 2,
-        spaceBetween: 15
-      },
-      500: {
-        slidesPerView: 3,
-        spaceBetween: 15
-      },
-      700: {
         slidesPerView: 3,
         spaceBetween: 20
-      } , 
+      },
+      600: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
     }
   });
 }
@@ -152,7 +148,6 @@ const clientsReviews = new Swiper('.clients-reviews .swiper', {
   loop: true,
   autoplay: true,
   draggable: true,
- 
   pagination: {
     el: '.clients-reviews .swiper-pagination',
     clickable: true,
@@ -202,19 +197,10 @@ const newsSwiper = new Swiper(' .news .swiper', {
 
 // faq section 
 
-$(".ques-text").click(function(){
-  $(this).parent().parent().siblings(".ques-answer").slideToggle(300);
-  $(this).siblings(".ques-text-sec i").toggleClass("la-minus");
-  $(this).siblings(".ques-text-sec i").toggleClass("la-plus");
-  $(this).parent().parent().siblings(".ques-num").toggleClass("active-color-blue");
-  $(this).toggleClass("active-color-blue");
-  $(this).siblings(".ques-text-sec i").toggleClass("active-color-blue");
-  $(".ques-answer").not($(this).parent().parent().siblings(".ques-answer")).slideUp(300);
-  $(".ques-num").not($(this).parent().parent().siblings(".ques-num")).removeClass("active-color-blue");
-  $(".ques-text-sec i").not($(this).siblings(".ques-text-sec i")).removeClass("active-color-blue");
-  $(".ques-text-sec i").not($(this).siblings(".ques-text-sec i")).removeClass("la-minus");
-  $(".ques-text-sec i").not($(this).siblings(".ques-text-sec i")).addClass("la-plus");
-  $(".ques-text").not($(this)).removeClass("active-color-blue");
+$(".main-question").click(function(){
+  $(this).children(".ques-answer").slideToggle(300);
+  $(this).toggleClass("active").siblings().removeClass("active");
+  $(".ques-answer").not($(this).children(".ques-answer")).slideUp(300);
 })
 
 /************************************************************************************************** */
@@ -365,9 +351,9 @@ if($(window).width() <= 992) {
       if ($(window).scrollTop() > 150) {
           $("header").addClass("fixed");
           $(".open-search-btn i").removeClass("la-times") ;
-          $("header").addClass("header-box-shadow");
           $(".account-details").removeClass("show-account-details");
           $(".account-btn").children(".la-user").removeClass("user-color");
+          $(".search").css("display" , "none");
           if($(window).width() > 768){
             $(".main-nav").addClass("main-nav-scroll");
           } 
@@ -377,10 +363,15 @@ if($(window).width() <= 992) {
             $(".main-nav").addClass("main-nav-scroll");
             $("nav").addClass("nav-scroll")
           } 
+          if($(window).width() < 992){
+            $("header").addClass("header-box-shadow");
+            $(".open-search-btn").css("display" , "block");
+          }
           
       } else {
           $("header").removeClass("fixed");
           $("header").removeClass("header-box-shadow");
+          $(".search").css("display" , "block");
           if($(window).width() > 768){
             $(".main-nav").removeClass("main-nav-scroll");
           } 
@@ -390,6 +381,10 @@ if($(window).width() <= 992) {
             $(".main-nav").removeClass("main-nav-scroll");
             $("nav").removeClass("nav-scroll")
           } 
+          if($(window).width() < 992){
+            $("header").removeClass("header-box-shadow");
+            $(".open-search-btn").css("display" , "none");
+          }
          
           
       }

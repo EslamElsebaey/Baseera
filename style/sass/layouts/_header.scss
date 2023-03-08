@@ -5,7 +5,7 @@ body{
 
 @include max-992{
     body{
-        padding-top: 87.68px;
+        padding-top: 137.68px;
     }
    
     
@@ -15,7 +15,7 @@ body{
     
  
     body{
-        padding-top: 70px;
+        padding-top: 117px;
     }
     
 }
@@ -64,30 +64,36 @@ header{
         z-index: 11;
         opacity: 0;
         visibility: hidden;
-        min-width: 130px ;
+        min-width: 160px ;
         border-radius: 7px;
         background-color: #fff;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        padding: 8px 0;
+        padding: 10px;
         left: 50%;
         transform: translateX(-50%);
         li {
             text-align: center;
             transition: all linear .3s;
+            margin-bottom: 10px;
             a:hover{
-                color: #000;
-                background-color: rgba($color: $main-color, $alpha: 0.2) ;
+                color: $main-color;
             }
         }
         a{
             font-size: 13px;
-            line-height: 32px;
+            line-height: 1.7;
             color: #000 ;
            text-align: center;
            display: block;
             font-weight: 400;
             text-transform: initial;
         }
+    }
+}
+
+html[dir="ltr"]{
+    .li-drop .ul-drop a{
+        line-height: 1.5;
     }
 }
 
@@ -284,7 +290,6 @@ align-items: center;
     }
     span{
         font-size: 12px;
-        text-transform: uppercase;
         color: #000000;
         font-weight: 600;
     }
@@ -468,6 +473,9 @@ transform:  translateY(-50%) rotate(180deg)  !important;
     }
 
 @include max-992 {
+    .account-details{
+        top: 30px;
+    }
     .ul-navbar li .nav-ancor{
         color: #000;
         font-weight: 400;
@@ -550,7 +558,7 @@ transform:  translateY(-50%) rotate(180deg)  !important;
         display: none;
     }
     
-    .cart , .account-user .account-text , .open-search-btn{
+    .cart  , .open-search-btn{
         margin-inline-start: 20px;
     }
     .account-user .account-text{
@@ -558,7 +566,6 @@ transform:  translateY(-50%) rotate(180deg)  !important;
     }
     .search{
         margin-top: 10px;
-        display: none;
     }
     .account-text  .account-btn span{
         display: none;
@@ -571,6 +578,14 @@ transform:  translateY(-50%) rotate(180deg)  !important;
     }
     .bars , .search-icon{
         display: block;
+    }
+    .bars{
+        margin-inline-start: 20px;
+    }
+    .open-search-btn{
+        margin: 0;
+        display: none;
+        margin-inline-end: 20px;
     }
     .account-user{
         margin-bottom: 0 !important;
@@ -670,7 +685,7 @@ transform:  translateY(-50%) rotate(180deg)  !important;
 
     .ul-navbar li .nav-ancor{
         color: #000;
-        font-weight: 400;
+        font-weight: 700;
         &:hover{
             color: $main-color;
         }
@@ -719,7 +734,7 @@ transform:  translateY(-50%) rotate(180deg)  !important;
             color: $main-color !important;
         }
         .logo .baseera-logo{
-            height: 60px;
+            height: 55px;
         }
         .account-user .account-text i{
             margin-inline-end: 0;
@@ -739,14 +754,15 @@ transform:  translateY(-50%) rotate(180deg)  !important;
 @include max-768 {
    
     .logo a:first-of-type{
-        margin-inline-end: 0;
+        margin-inline-end: 17px;
     }
     .main-nav{
         padding: 7px 0;
     }
-.moc-logo{
-    display: none;
-}
+
+    .logo .moc-logo{
+        width: 85px;
+    }
    
 
 header{

@@ -68,6 +68,11 @@ ul li {
         line-height: 24px;
     }
 }
+html[dir="ltr"]{
+    .newsletter .newsletter-text{
+        line-height: 1.7;
+    }
+}
 
 .message {
     position: relative;

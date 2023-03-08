@@ -74,8 +74,6 @@ html[dir=ltr] body {
 
 img {
   image-rendering: -webkit-optimize-contrast;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .ul-es {
@@ -293,12 +291,12 @@ body {
 
 @media only screen and (max-width: 991px) {
   body {
-    padding-top: 87.68px;
+    padding-top: 137.68px;
   }
 }
 @media only screen and (max-width: 767px) {
   body {
-    padding-top: 70px;
+    padding-top: 117px;
   }
 }
 header {
@@ -344,30 +342,34 @@ header {
   z-index: 11;
   opacity: 0;
   visibility: hidden;
-  min-width: 130px;
+  min-width: 160px;
   border-radius: 7px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 8px 0;
+  padding: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
 .li-drop .ul-drop li {
   text-align: center;
   transition: all linear 0.3s;
+  margin-bottom: 10px;
 }
 .li-drop .ul-drop li a:hover {
-  color: #000;
-  background-color: rgba(24, 119, 141, 0.2);
+  color: #18778d;
 }
 .li-drop .ul-drop a {
   font-size: 13px;
-  line-height: 32px;
+  line-height: 1.7;
   color: #000;
   text-align: center;
   display: block;
   font-weight: 400;
   text-transform: initial;
+}
+
+html[dir=ltr] .li-drop .ul-drop a {
+  line-height: 1.5;
 }
 
 .logo {
@@ -552,7 +554,6 @@ html[dir=ltr] .search-item input {
 }
 .account-user .account-text span {
   font-size: 12px;
-  text-transform: uppercase;
   color: #000000;
   font-weight: 600;
 }
@@ -716,6 +717,9 @@ nav .top-header {
   }
 }
 @media only screen and (max-width: 991px) {
+  .account-details {
+    top: 30px;
+  }
   .ul-navbar li .nav-ancor {
     color: #000;
     font-weight: 400;
@@ -792,7 +796,7 @@ nav .top-header {
   .main-nav .lang {
     display: none;
   }
-  .cart, .account-user .account-text, .open-search-btn {
+  .cart, .open-search-btn {
     -webkit-margin-start: 20px;
             margin-inline-start: 20px;
   }
@@ -801,7 +805,6 @@ nav .top-header {
   }
   .search {
     margin-top: 10px;
-    display: none;
   }
   .account-text .account-btn span {
     display: none;
@@ -814,6 +817,16 @@ nav .top-header {
   }
   .bars, .search-icon {
     display: block;
+  }
+  .bars {
+    -webkit-margin-start: 20px;
+            margin-inline-start: 20px;
+  }
+  .open-search-btn {
+    margin: 0;
+    display: none;
+    -webkit-margin-end: 20px;
+            margin-inline-end: 20px;
   }
   .account-user {
     margin-bottom: 0 !important;
@@ -901,7 +914,7 @@ nav .top-header {
   }
   .ul-navbar li .nav-ancor {
     color: #000;
-    font-weight: 400;
+    font-weight: 700;
   }
   .ul-navbar li .nav-ancor:hover {
     color: #18778d;
@@ -949,7 +962,7 @@ nav .top-header {
     color: #18778d !important;
   }
   .logo .baseera-logo {
-    height: 60px;
+    height: 55px;
   }
   .account-user .account-text i {
     -webkit-margin-end: 0;
@@ -961,14 +974,14 @@ nav .top-header {
 }
 @media only screen and (max-width: 767px) {
   .logo a:first-of-type {
-    -webkit-margin-end: 0;
-            margin-inline-end: 0;
+    -webkit-margin-end: 17px;
+            margin-inline-end: 17px;
   }
   .main-nav {
     padding: 7px 0;
   }
-  .moc-logo {
-    display: none;
+  .logo .moc-logo {
+    width: 85px;
   }
   header {
     position: absolute;
@@ -1041,6 +1054,8 @@ nav .top-header {
 }
 .main .figure img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main .figure::after {
   position: absolute;
@@ -1314,6 +1329,7 @@ button.close i {
   font-size: 16px;
   color: #ffffff;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .bg-purple {
@@ -1358,6 +1374,7 @@ button.close i {
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
+  text-transform: capitalize;
 }
 
 .dependable-prog {
@@ -1383,10 +1400,10 @@ button.close i {
   padding: 0;
 }
 .dependable-prog .nav-tabs > li > a.active, .dependable-prog .nav-tabs > li > a.active:focus, .dependable-prog .nav-tabs > li > a.active:hover {
-  border: 2px solid #18778d;
+  border-color: #18778d;
 }
 .dependable-prog .nav-tabs > li > a {
-  border: none;
+  border: 2px solid transparent;
   border-radius: 0;
   margin: 0;
   padding: 35px 20px;
@@ -1763,6 +1780,14 @@ button.close i {
   background-color: #f7f7f7;
   padding-top: 30px;
   padding-bottom: 30px;
+  cursor: pointer;
+}
+
+.main-question.active .ques-text, .main-question.active .ques-text-sec i, .main-question.active .ques-num {
+  color: #18778d;
+}
+.main-question.active .la-plus:before {
+  content: "\f068";
 }
 
 .ques-num {
@@ -1798,6 +1823,10 @@ button.close i {
   max-width: 85%;
 }
 
+html[dir=ltr] .ques-text {
+  line-height: 1.7;
+}
+
 .ques-text-sec {
   display: flex;
   align-items: flex-start;
@@ -1806,6 +1835,7 @@ button.close i {
 .ques-text-sec i {
   font-size: 24px;
   color: #000;
+  transition: all linear 0.2s;
 }
 
 .ques-answer {
@@ -1984,14 +2014,22 @@ html[dir=ltr] .news-item .news-item-desc p {
 }
 @media only screen and (max-width: 1199px) {
   .counters-parent {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+  }
+  .counters-parent .counter-item {
+    width: calc(25% - 15px);
   }
   .success-partners .swiper-slide {
     width: 20%;
   }
 }
 @media only screen and (max-width: 991px) {
+  .programs .nav-tabs li:nth-of-type(2) {
+    margin: 0 10px 10px 10px;
+  }
   .success-partners .swiper-slide {
     width: 25%;
   }
@@ -2005,11 +2043,16 @@ html[dir=ltr] .news-item .news-item-desc p {
     padding: 15px;
   }
   .counters-parent {
-    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+  .counters-parent .counter-item {
+    width: calc(33% - 12px);
   }
 }
 @media only screen and (max-width: 767px) {
+  html[dir=ltr] .counter-item span {
+    line-height: 1.3;
+  }
   .dependable-prog {
     padding: 50px 0;
   }
@@ -2025,9 +2068,12 @@ html[dir=ltr] .news-item .news-item-desc p {
     display: none;
   }
   .dependable-prog .nav-tabs > li > a {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     padding: 5px;
+  }
+  .dependable-prog .nav-tabs > li > a img {
+    width: 100%;
   }
   .item-desc {
     padding: 15px;
@@ -2052,12 +2098,14 @@ html[dir=ltr] .news-item .news-item-desc p {
     padding: 50px 0 60px 0;
   }
   .programs .nav-tabs > li > a {
-    width: 181px;
-    height: 45px;
-    padding: 0;
+    padding: 10.5px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
+  }
+  .programs .nav-tabs li:nth-of-type(2) {
+    margin: 0 10px;
   }
   .programs .nav-tabs {
     overflow-x: auto;
@@ -2078,6 +2126,9 @@ html[dir=ltr] .news-item .news-item-desc p {
     font-size: 15px;
     text-align: justify;
     line-height: 27px;
+  }
+  html[dir=ltr] .clients-reviews .review-para, html[dir=ltr] .prog-content p {
+    line-height: 1.7;
   }
   .mycontainer {
     padding: 0 20px;
@@ -2112,8 +2163,13 @@ html[dir=ltr] .news-item .news-item-desc p {
     display: none;
   }
   .counters-parent {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
+  }
+  .counters-parent .counter-item {
+    width: calc(50% - 10px);
   }
   .counter-item .icon {
     width: 50px;
@@ -2136,7 +2192,7 @@ html[dir=ltr] .news-item .news-item-desc p {
     height: 100%;
   }
   .main .figure img {
-    height: 100%;
+    min-height: 210px;
   }
   .main .banner-desc h1 {
     font-size: 20px;
@@ -2158,7 +2214,7 @@ html[dir=ltr] .news-item .news-item-desc p {
   }
   .vision-parent {
     grid-template-columns: 1fr;
-    row-gap: 30px;
+    row-gap: 40px;
   }
   .vision-item p {
     text-align: justify;
@@ -2166,6 +2222,9 @@ html[dir=ltr] .news-item .news-item-desc p {
     font-size: 14px;
     -moz-text-align-last: center;
          text-align-last: center;
+  }
+  html[dir=ltr] .vision-item p {
+    line-height: 1.7;
   }
   .vision-item {
     text-align: center;
@@ -2179,6 +2238,9 @@ html[dir=ltr] .news-item .news-item-desc p {
   }
   .success-partners .swiper-slide {
     margin: 0;
+  }
+  .success-partners .swiper-slide img {
+    max-width: 100%;
   }
   .success-partners {
     padding-bottom: 80px;
@@ -2305,6 +2367,10 @@ html[dir=ltr] .message input {
   font-weight: 400;
   margin-bottom: 15px;
   line-height: 24px;
+}
+
+html[dir=ltr] .newsletter .newsletter-text {
+  line-height: 1.7;
 }
 
 .message {
@@ -2547,10 +2613,14 @@ html[dir=ltr] .send i {
     margin-top: 0;
   }
 }
+html[dir=ltr] .title-text {
+  line-height: 1.3;
+}
+
 @media only screen and (max-width: 767px) {
   .title-text {
     font-size: 20px !important;
-    line-height: 1.7;
+    line-height: 1.5;
     margin-bottom: 25px !important;
   }
   .modal-content {
@@ -2564,6 +2634,9 @@ html[dir=ltr] .send i {
   }
   .myform {
     margin-top: 20px;
+  }
+  html[dir=ltr] .title-text {
+    line-height: 1.4;
   }
 }
 .header-box-shadow {

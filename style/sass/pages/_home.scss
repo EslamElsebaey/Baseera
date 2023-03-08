@@ -6,6 +6,7 @@
         position: relative;
         img{
             width: 100%;
+            object-fit: cover;
         }
         &::after{
             position: absolute;
@@ -286,6 +287,7 @@ button.close{
         font-size: 16px;
         color: #ffffff;
         font-weight: 400;
+        text-transform: capitalize;
     }
 }
 
@@ -335,6 +337,7 @@ button.close{
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
+    text-transform: capitalize;
 }
 
 .dependable-prog{
@@ -359,10 +362,10 @@ button.close{
     }
     
     .nav-tabs>li>a.active, .nav-tabs>li>a.active:focus, .nav-tabs>li>a.active:hover{
-        border: 2px solid #18778d;
+        border-color:  #18778d;
     }
     .nav-tabs>li>a{
-        border: none;
+        border: 2px solid transparent;
         border-radius: 0;
         margin: 0;
         padding: 35px 20px;
@@ -796,6 +799,16 @@ align-items: center;
     background-color: #f7f7f7;
     padding-top: 30px ;
     padding-bottom: 30px ;
+    cursor: pointer;
+    
+}
+.main-question.active {
+    .ques-text , .ques-text-sec i , .ques-num{
+        color: $main-color;
+    }
+    .la-plus:before{
+        content: "\f068";
+    }
     
 }
 
@@ -831,6 +844,11 @@ align-items: center;
     line-height: 30px;
     max-width: 85%;
 }
+html[dir="ltr"]{
+    .ques-text{
+        line-height: 1.7;
+    }
+}
 .ques-text-sec{
     display: flex;
     align-items: flex-start;
@@ -838,6 +856,7 @@ align-items: center;
     i{
         font-size: 24px;
         color: #000;
+        transition: all linear .2s;
     }
 }
 .ques-answer{
@@ -1045,8 +1064,13 @@ html[dir ="ltr"] {
 
 @include max-1200{
     .counters-parent{
-        grid-template-columns: repeat(4 , 1fr);
+        display: flex;
+        flex-wrap: wrap;
         gap: 20px;
+        justify-content: center;
+        .counter-item{
+            width: calc(25% - 15px);
+        }
     }
     .success-partners .swiper-slide{
         width: calc(100% / 5);
@@ -1054,6 +1078,9 @@ html[dir ="ltr"] {
 }
 
 @include max-992{
+    .programs .nav-tabs li:nth-of-type(2) {
+        margin: 0 10px 10px 10px;
+    }
     .success-partners .swiper-slide{
         width: calc(100% / 4);
     }
@@ -1067,13 +1094,21 @@ html[dir ="ltr"] {
         padding: 15px;
     }
     .counters-parent{
-        grid-template-columns: repeat(3 , 1fr);
         gap: 20px;
+        .counter-item{
+            width: calc(33% - 12px);
+        }
     }
 }
 
 
 @include max-768 {
+    html[dir="ltr"]{
+        .counter-item span {
+            line-height: 1.3;
+        }
+    }
+    
     .dependable-prog{
         padding: 50px 0;
     }
@@ -1088,9 +1123,12 @@ html[dir ="ltr"] {
           }
     }
     .dependable-prog .nav-tabs > li > a{
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
         padding: 5px;
+        img{
+            width: 100%;
+        }
     }
     .item-desc{
         padding: 15px;
@@ -1115,12 +1153,14 @@ html[dir ="ltr"] {
         padding: 50px 0 60px 0;
     }
     .programs .nav-tabs > li > a{
-        width: 181px;
-        height: 45px;
-        padding: 0;
+        padding: 10.5px 10px;
         display: flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
+    }
+    .programs .nav-tabs li:nth-of-type(2) {
+        margin: 0 10px;
     }
     .programs .nav-tabs{
         overflow-x: auto;
@@ -1142,6 +1182,11 @@ html[dir ="ltr"] {
         font-size: 15px;
         text-align: justify;
         line-height: 27px;
+      }
+      html[dir="ltr"]{
+        .clients-reviews .review-para ,  .prog-content p{
+            line-height: 1.7;
+        }
       }
       .mycontainer{
           padding: 0 20px;
@@ -1176,8 +1221,13 @@ html[dir ="ltr"] {
         display: none;
     }
     .counters-parent{
-        grid-template-columns : repeat(2, 1fr);
-        gap: 20px;
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       gap: 20px;
+       .counter-item{
+        width: calc(50% - 10px);
+       }
     }
     .counter-item .icon{
         width: 50px;
@@ -1199,7 +1249,7 @@ html[dir ="ltr"] {
     .main .figure{
         height: 100%;
         img{
-            height: 100%;
+            min-height: 210px;
         }
     }
     .main .banner-desc h1{
@@ -1222,7 +1272,7 @@ html[dir ="ltr"] {
     }
     .vision-parent{
         grid-template-columns:  1fr;
-        row-gap: 30px;
+        row-gap: 40px;
     }
     .vision-item p{
         text-align: justify;
@@ -1230,6 +1280,12 @@ html[dir ="ltr"] {
         font-size: 14px;
         text-align-last: center;
     }
+    html[dir="ltr"]{
+        .vision-item p{
+            line-height: 1.7;
+        }
+    }
+  
     .vision-item{
         text-align: center;
     }
@@ -1242,6 +1298,9 @@ html[dir ="ltr"] {
     }
     .success-partners .swiper-slide{
         margin: 0;
+        img{
+            max-width: 100%;
+        }
     }
     .success-partners {
         padding-bottom: 80px;
