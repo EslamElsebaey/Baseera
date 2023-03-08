@@ -364,8 +364,9 @@ header {
   color: #000;
   text-align: center;
   display: block;
-  font-weight: 400;
-  text-transform: initial;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all linear 0.2s;
 }
 
 html[dir=ltr] .li-drop .ul-drop a {
