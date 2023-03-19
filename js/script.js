@@ -1,11 +1,17 @@
-
-$(window).load(function () {
-  $(".preloader").addClass("preloader-hidden")
-});
-
-
-
 $(document).ready(function(){
+     // preloader
+     setTimeout(function () {
+      $(".preloader").addClass("preloader-hidden")
+    }, 2000);
+
+
+
+   
+
+/************************************************************************************************** */
+
+
+
 
 //  programs swipers
 
@@ -415,6 +421,9 @@ $(".pagination-sec-parent a").click(function(e){
           }
           
       } else {
+          // if( $(window).scrollTop() == 0 ) {
+          //   $(".search").show();
+          // }
           $("header").removeClass("fixed");
           $("header").removeClass("header-box-shadow");
           if($(window).width() > 768){
