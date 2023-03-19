@@ -3258,6 +3258,9 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
   }
   .educational-facilities img {
     margin-bottom: 25px;
+    min-height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .educational-facilities .for_details {
     margin-bottom: 20px;
