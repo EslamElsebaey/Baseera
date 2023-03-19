@@ -1,8 +1,13 @@
+
+$(window).load(function () {
+  $(".preloader").addClass("preloader-hidden")
+});
+
 $(document).ready(function(){
      // preloader
-     setTimeout(function () {
-      $(".preloader").addClass("preloader-hidden")
-    }, 2000);
+    //  setTimeout(function () {
+    //   $(".preloader").addClass("preloader-hidden")
+    // }, 2000);
 
 
 
