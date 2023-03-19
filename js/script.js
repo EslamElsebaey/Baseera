@@ -1,18 +1,11 @@
+
+$(window).load(function () {
+  $(".preloader").addClass("preloader-hidden")
+});
+
+
+
 $(document).ready(function(){
-     // preloader
-    //  setTimeout(function () {
-     
-    // }, 2000);
-    $(".preloader").addClass("preloader-hidden")
-
-
-
-   
-
-/************************************************************************************************** */
-
-
-
 
 //  programs swipers
 
