@@ -1,8 +1,9 @@
 $(document).ready(function(){
      // preloader
-     setTimeout(function () {
-      $(".preloader").addClass("preloader-hidden")
-    }, 2000);
+    //  setTimeout(function () {
+     
+    // }, 2000);
+    $(".preloader").addClass("preloader-hidden")
 
 
 
