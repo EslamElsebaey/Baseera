@@ -19,6 +19,8 @@ const qualifiedProg = new Swiper('.qualified-prog .swiper', {
   loop: true,
   autoplay: true,
   draggable: true,
+  observer: true,
+  observeParents: true,
  
   pagination: {
     el: '.qualified-prog .swiper-pagination',
@@ -28,8 +30,7 @@ const qualifiedProg = new Swiper('.qualified-prog .swiper', {
     nextEl: '.qualified-prog .swiper-button-next ',
     prevEl: '.qualified-prog .swiper-button-prev',
   },
-  observer: true,
-  observeParents: true,
+
   breakpoints: {
   
     350: {
@@ -50,6 +51,8 @@ const developProg = new Swiper('.develop-prog .swiper', {
   loop: true,
   autoplay: true,
   draggable: true,
+  observer: true,
+  observeParents: true,
  
   pagination: {
     el: '.develop-prog .swiper-pagination',
@@ -59,8 +62,7 @@ const developProg = new Swiper('.develop-prog .swiper', {
     nextEl: '.develop-prog .swiper-button-next ',
     prevEl: '.develop-prog .swiper-button-prev',
   },
-  observer: true,
-  observeParents: true,
+ 
   breakpoints: {
   
     350: {
@@ -81,6 +83,8 @@ const p4cProg = new Swiper('.p4c-prog .swiper', {
   loop: true,
   autoplay: true,
   draggable: true,
+  observer: true,
+  observeParents: true,
  
   pagination: {
     el: '.p4c-prog .swiper-pagination',
@@ -90,8 +94,7 @@ const p4cProg = new Swiper('.p4c-prog .swiper', {
     nextEl: '.p4c-prog .swiper-button-next ',
     prevEl: '.p4c-prog .swiper-button-prev',
   },
-  observer: true,
-  observeParents: true,
+ 
   breakpoints: {
   
     350: {
@@ -108,40 +111,6 @@ const p4cProg = new Swiper('.p4c-prog .swiper', {
     }
   }
 });
-
-
-
-// success-partners swiper
-
-if($(window).width()  < 768 ) {
-  const successPartners = new Swiper('.success-partners .swiper', {
-    loop: true,
-    autoplay: true,
-    draggable: true,
-   
-    pagination: {
-      el: '.success-partners .swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.success-partners .swiper-button-next ',
-      prevEl: '.success-partners .swiper-button-prev',
-    },
-    observer: true,
-    observeParents: true,
-    breakpoints: {
-      350: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      600: {
-        slidesPerView: 4,
-        spaceBetween: 20
-      },
-    }
-  });
-}
-
 
 // clients reviews swiper 
 const clientsReviews = new Swiper('.clients-reviews .swiper', {
@@ -189,6 +158,80 @@ const newsSwiper = new Swiper(' .news .swiper', {
     },
   }
 });
+
+
+
+// latest-releases swiper
+
+const latestReleases = new Swiper('.latest-releases .swiper', {
+  loop: true,
+  // autoplay: true,
+  draggable: true,
+ 
+  pagination: {
+    el: '.latest-releases .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.latest-releases .swiper-button-next ',
+    prevEl: '.latest-releases .swiper-button-prev',
+  },
+
+  breakpoints: {
+  
+    350: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    } , 
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 70
+    } , 
+    1199: {
+      slidesPerView: 4,
+      spaceBetween: 100
+    }
+  }
+});
+
+
+
+
+// success-partners swiper
+
+if($(window).width()  < 768 ) {
+  const successPartners = new Swiper('.success-partners .swiper', {
+    loop: true,
+    autoplay: true,
+    draggable: true,
+   
+    pagination: {
+      el: '.success-partners .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.success-partners .swiper-button-next ',
+      prevEl: '.success-partners .swiper-button-prev',
+    },
+    observer: true,
+    observeParents: true,
+    breakpoints: {
+      350: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      600: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+    }
+  });
+}
+
 
 
 
@@ -340,12 +383,21 @@ if($(window).width() <= 992) {
     
 
 /************************************************************************************************** */
+// books pagination
+
+$(".pagination-sec-parent a").click(function(e){
+  e.preventDefault();
+  $(this).addClass("page-active");
+  $(".pagination-sec-parent a").not($(this)).removeClass("page-active");
+})
+
+/************************************************************************************************** */
 
 
 
 //fixed nav
 
-    //~~~~~~~~~ fixed header in mobile
+    
   
     $(window).on("scroll", function () {
       if ($(window).scrollTop() > 150) {
@@ -353,7 +405,6 @@ if($(window).width() <= 992) {
           $(".open-search-btn i").removeClass("la-times") ;
           $(".account-details").removeClass("show-account-details");
           $(".account-btn").children(".la-user").removeClass("user-color");
-          $(".search").css("display" , "none");
           if($(window).width() > 768){
             $(".main-nav").addClass("main-nav-scroll");
           } 
@@ -364,14 +415,17 @@ if($(window).width() <= 992) {
             $("nav").addClass("nav-scroll")
           } 
           if($(window).width() < 992){
+            $(".search").hide();
             $("header").addClass("header-box-shadow");
             $(".open-search-btn").css("display" , "block");
           }
           
       } else {
+          // if( $(window).scrollTop() == 0 ) {
+          //   $(".search").show();
+          // }
           $("header").removeClass("fixed");
           $("header").removeClass("header-box-shadow");
-          $(".search").css("display" , "block");
           if($(window).width() > 768){
             $(".main-nav").removeClass("main-nav-scroll");
           } 
@@ -384,9 +438,10 @@ if($(window).width() <= 992) {
           if($(window).width() < 992){
             $("header").removeClass("header-box-shadow");
             $(".open-search-btn").css("display" , "none");
+           $(".search").show();
           }
-         
           
+         
       }
     });
     var fixedBar = document.querySelector("header"),
@@ -403,6 +458,72 @@ if($(window).width() <= 992) {
 
 
 
+// show other choice iput 
+
+$("input[type='radio'").click(function(){
+ if($(this).is(':checked')) {
+  if($(this).is(".other")){
+    $(this).parent(".radio-sec").parent(".myradio").siblings(".other-choice").slideDown(300)
+  }else{
+    $(this).parent(".radio-sec").parent(".myradio").siblings(".other-choice").slideUp(300)
+  }
+ }
+})
+
+
+
+ 
+
+
+// show another teacher rigisteration form
+
+$("input[type='checkbox'").click(function(){
+  if($('#register').is(':checked')) {
+   $(".another-teacher-form").slideDown(300);
+  }else{
+   $(".another-teacher-form").slideUp(300);
+  }
+ })
+
+//  ***************************************************************************clientsReviews
+
+
+//  cart counter
+
+$(".product-counter .plus").click(function(){
+  let maxVal = parseInt($(".product-counter input").attr("data-max"));
+  let val = $(".product-counter input").val();
+  if(val < maxVal){
+    val++
+  }
+  $(".product-counter input").val(val)
+})
+
+$(".product-counter .minus").click(function(){
+  let minVal = parseInt($(".product-counter input").attr("data-min"));
+  let val = $(".product-counter input").val();
+  if(val > minVal){
+    val--
+  }
+  $(".product-counter input").val(val)
+})
+
+
+// fire select2
+$('.myselect').select2();
+
+
+
+// cancel search 
+$('.inquiry-form select').select2({
+  minimumResultsForSearch: -1
+});
+
+// select arrow rotate
+
+$(".select2-selection").click(function(){
+  $(".select2-selection--single").toggleClass("rotate-select-icon");
+ })
 
 
 })  // end of document ready

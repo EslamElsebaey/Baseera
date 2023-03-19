@@ -7,7 +7,7 @@ html[dir="ltr"]{
 @include max-768{
     .title-text{
         font-size: 20px !important;
-        line-height: 1.5;
+        line-height: 1.4;
         margin-bottom: 25px !important ;
     }
     .modal-content{
@@ -52,4 +52,8 @@ html[dir="ltr"]{
 .preloader-hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+.hide-search {
+    display: none ;
 }

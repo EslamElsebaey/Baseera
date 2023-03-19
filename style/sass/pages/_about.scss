@@ -15,7 +15,14 @@
     align-items: center;
     padding: 0;
     margin-bottom: 0;
+    row-gap: 4px;
    
+}
+
+html[dir="ltr"]{
+    .breadcrumb{
+        row-gap: 2px;
+    }
 }
 
 
@@ -45,6 +52,7 @@ ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li {
     }
 }
 .about-common-questions{
+    padding: 70px 0 110px 0;
     .ques-num{
         font-weight: 700;
     }
@@ -61,5 +69,8 @@ ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li {
 @include max-768 {
     .breadcrumb-sec {
        padding:  10px 0 15px 0 ;
+    }
+    .about-common-questions{
+        padding: 50px 0 60px 0;
     }
 }

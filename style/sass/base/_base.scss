@@ -84,6 +84,7 @@ img {
     text-decoration: none;
     color: black;
   }
+  padding: 0;
   outline: none;
   border: none;
   background-color: transparent;
@@ -211,7 +212,7 @@ cursor : pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #25d366;
+  background-color: #74cd5c;;
   animation-name: pulse;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-out;
@@ -229,7 +230,7 @@ cursor : pointer;
 
 @keyframes pulse {
 	0% {
-		box-shadow: 0 0 0 0 #25d366;
+		box-shadow: 0 0 0 0 #74cd5c;
 	}
 	80% {
 		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
