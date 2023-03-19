@@ -165,7 +165,7 @@ const newsSwiper = new Swiper(' .news .swiper', {
 
 const latestReleases = new Swiper('.latest-releases .swiper', {
   loop: true,
-  // autoplay: true,
+  autoplay: true,
   draggable: true,
  
   pagination: {
@@ -421,9 +421,6 @@ $(".pagination-sec-parent a").click(function(e){
           }
           
       } else {
-          // if( $(window).scrollTop() == 0 ) {
-          //   $(".search").show();
-          // }
           $("header").removeClass("fixed");
           $("header").removeClass("header-box-shadow");
           if($(window).width() > 768){
