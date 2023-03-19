@@ -73,4 +73,8 @@ ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li {
     .about-common-questions{
         padding: 50px 0 60px 0;
     }
+    .about-banner figure img{
+        min-height: 150px;
+        object-fit: cover;
+    }
 }

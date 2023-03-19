@@ -131,6 +131,9 @@ html[dir="ltr"]{
 }
 
 @include max-768{
+    .academic-team{
+        padding-top: 20px;
+    }
     .programs-offered-box, .videos-box{
         grid-template-columns: 1fr;
         row-gap: 25px;

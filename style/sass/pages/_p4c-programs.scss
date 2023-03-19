@@ -23,13 +23,13 @@
 @include max-768 {
     .young-programs , .old-programs {
         grid-template-columns: 1fr;
-        row-gap: 20px;
+        row-gap: 25px;
     }
     .p4c-programs .explained-title{
         margin-bottom: 20px;
     }
     .p4c-programs {
-        padding-top: 10px;
+        padding-top: 25px;
     }
     .p4c-programs  .title {
         line-height: 2;

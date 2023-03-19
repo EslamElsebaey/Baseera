@@ -126,7 +126,7 @@
         border-radius: 5px;
         background-color: #f2f2f2;
         border: none;
-        padding: 10px 22px;
+        padding: 0px 22px;
         border: 1px solid transparent;
         transition: all linear .2s;
         &:focus{
@@ -307,5 +307,8 @@
     }
     .total-table table{
         margin-bottom: 35px;
+    }
+    .disc-coupon-inpt input{
+        padding: 0px 15px;
     }
  }

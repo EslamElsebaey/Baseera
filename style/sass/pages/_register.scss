@@ -335,8 +335,8 @@ html[dir="ltr"]{
 
 html[dir="ltr"]{
     .payment-policy ul li{
-        line-height: 1.6;
-    margin-bottom: 7px;
+        line-height: 1.5;
+        margin-bottom: 10px;
     }
     
 }
@@ -367,18 +367,18 @@ html[dir="ltr"]{
 
 @include max-768{
     .conditions-radio .radio-sec{
-        margin-bottom: 12px;
+        margin-bottom: 13px;
     }
     .inputs-parent{
         grid-template-columns: 1fr;
         row-gap: 17px;
     }
     .register-sec{
-        padding-top: 15px;
+        padding-top: 25px;
     }
     .myradio{
         grid-template-columns: repeat(2 , 1fr);
-        row-gap: 12px;
+        row-gap: 14px;
     }
     .radio-general-input{
         margin-bottom: 20px;
@@ -419,6 +419,8 @@ html[dir="ltr"]{
     }
     .payment-policy ul li{
         font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 8px;
     }
     .pay-now-sec .pay-now-btn{
         height: 50px;

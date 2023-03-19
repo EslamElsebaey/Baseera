@@ -207,6 +207,9 @@ font-weight: 700;
     .checkout-parent{
         grid-template-columns: 1fr;
     }
+    .terms-sec{
+        margin: 40px 0;
+    }
     .checkout .myform .myLabel{
         font-size: 15px;
     }
@@ -243,8 +246,8 @@ font-weight: 700;
         justify-content: flex-end;
     }
     .checkout {
-        padding-top: 20px;
-        padding-bottom: 60px;
+        padding-top: 30px;
+        padding-bottom: 70px;
     }
     .terms-sec{
         .checkmark{

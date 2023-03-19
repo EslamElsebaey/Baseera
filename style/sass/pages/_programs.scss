@@ -84,7 +84,7 @@ html[dir="ltr"]{
 @include max-768 {
     .all-programs-parent{
         grid-template-columns: 1fr;
-        row-gap: 20px;
+        row-gap: 25px;
     }
     .all-programs .title{
         font-size: 20px;
@@ -105,8 +105,8 @@ html[dir="ltr"]{
         padding: 10px 17px;
     }
     .all-programs{
-        padding-bottom: 70px;
-        padding-top: 10px;
+        padding-bottom: 80px;
+        padding-top: 25px;
     }
     html[dir="ltr"]{
         .details-btn{

@@ -2391,6 +2391,11 @@ ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li {
   .about-common-questions {
     padding: 50px 0 60px 0;
   }
+  .about-banner figure img {
+    min-height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .team-common-questions {
   padding: 70px 0 120px 0;
@@ -2533,7 +2538,7 @@ ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li {
     gap: 25px;
   }
   .ourTeam {
-    margin-top: 20px;
+    padding-top: 25px;
   }
   .ourTeam .title {
     font-size: 18px;
@@ -2572,7 +2577,7 @@ ol.breadcrumb li a, ol.breadcrumb li span, ol.breadcrumb li {
     margin-bottom: 12px;
   }
   .team-common-questions {
-    padding: 60px 0 70px 0;
+    padding: 60px 0 80px 0;
   }
   .institute-management {
     margin-bottom: 45px;
@@ -2726,6 +2731,9 @@ html[dir=ltr] .person-details-item ul li {
   }
 }
 @media only screen and (max-width: 767px) {
+  .academic-team {
+    padding-top: 20px;
+  }
   .programs-offered-box, .videos-box {
     grid-template-columns: 1fr;
     row-gap: 25px;
@@ -2876,12 +2884,13 @@ html[dir=ltr] .person-details-item ul li {
     margin-bottom: 15px;
   }
   .philo-thinking {
-    padding-bottom: 70px;
+    padding-bottom: 80px;
     padding-top: 20px;
   }
   .philo-thinking-content ul li p {
     -webkit-margin-start: 7px;
             margin-inline-start: 7px;
+    line-height: 1.9;
   }
   .philo-thinking .video {
     margin-bottom: 25px;
@@ -2983,7 +2992,7 @@ html[dir=ltr] .details-btn {
 @media only screen and (max-width: 767px) {
   .all-programs-parent {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 25px;
   }
   .all-programs .title {
     font-size: 20px;
@@ -3004,8 +3013,8 @@ html[dir=ltr] .details-btn {
     padding: 10px 17px;
   }
   .all-programs {
-    padding-bottom: 70px;
-    padding-top: 10px;
+    padding-bottom: 80px;
+    padding-top: 25px;
   }
   html[dir=ltr] .details-btn {
     width: 149px;
@@ -3089,10 +3098,10 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
 @media only screen and (max-width: 767px) {
   .qualified-prog-parent, .qualified-prog-parent2 {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 25px;
   }
   .qualified-programs, .programs-general, .development-programs {
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
   .programs-general .title {
     font-size: 20px;
@@ -3104,7 +3113,7 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
     margin-bottom: 15px;
   }
   .qualified-programs, .development-programs {
-    padding-top: 10px;
+    padding-top: 25px;
   }
   .qualified-programs p, .development-programs p {
     margin-bottom: 25px;
@@ -3141,13 +3150,13 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
 @media only screen and (max-width: 767px) {
   .young-programs, .old-programs {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 25px;
   }
   .p4c-programs .explained-title {
     margin-bottom: 20px;
   }
   .p4c-programs {
-    padding-top: 10px;
+    padding-top: 25px;
   }
   .p4c-programs .title {
     line-height: 2;
@@ -3243,18 +3252,16 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
     font-size: 20px;
   }
   .educational-facilities {
-    padding-bottom: 55px;
+    padding-bottom: 70px;
   }
   .educational-facilities .second-title {
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 25px;
     line-height: 1.65;
   }
   .educational-facilities .desc {
     font-size: 15px;
     line-height: 1.7;
-    -moz-text-align-last: center;
-         text-align-last: center;
   }
   .educational-facilities img {
     margin-bottom: 25px;
@@ -3453,7 +3460,7 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
     line-height: 1.7;
   }
   .program-details {
-    padding-top: 10px;
+    padding-top: 25px;
   }
   .program-details-parent .ques-answer > div p {
     line-height: 1.8;
@@ -3486,7 +3493,7 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
     margin-bottom: 25px;
   }
   .program-details {
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
 }
 .register-sec .myform, .checkout .myform {
@@ -3812,8 +3819,8 @@ html[dir=ltr] .teacher-sec label {
 }
 
 html[dir=ltr] .payment-policy ul li {
-  line-height: 1.6;
-  margin-bottom: 7px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -3839,18 +3846,18 @@ html[dir=ltr] .payment-policy ul li {
 }
 @media only screen and (max-width: 767px) {
   .conditions-radio .radio-sec {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
   }
   .inputs-parent {
     grid-template-columns: 1fr;
     row-gap: 17px;
   }
   .register-sec {
-    padding-top: 15px;
+    padding-top: 25px;
   }
   .myradio {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 12px;
+    row-gap: 14px;
   }
   .radio-general-input {
     margin-bottom: 20px;
@@ -3891,6 +3898,8 @@ html[dir=ltr] .payment-policy ul li {
   }
   .payment-policy ul li {
     font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 8px;
   }
   .pay-now-sec .pay-now-btn {
     height: 50px;
@@ -4704,7 +4713,7 @@ html[dir=ltr] .book-details-desc .author-details-item {
   }
   .about-baseera-publish .targets ul li {
     align-items: flex-start;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
   .logo-story h3 {
     font-size: 18px;
@@ -4728,7 +4737,7 @@ html[dir=ltr] .book-details-desc .author-details-item {
     line-height: 1.7;
   }
   .books {
-    padding: 25px 0 65px 0;
+    padding: 25px 0 80px 0;
   }
   .books .title {
     margin-bottom: 30px;
@@ -4749,7 +4758,7 @@ html[dir=ltr] .book-details-desc .author-details-item {
     width: 200px;
   }
   .book-details {
-    padding-top: 30px;
+    padding-top: 35px;
     margin-bottom: 30px;
   }
   .book-details-desc .title {
@@ -4921,7 +4930,7 @@ html[dir=ltr] .book-details-desc .author-details-item {
   border-radius: 5px;
   background-color: #f2f2f2;
   border: none;
-  padding: 10px 22px;
+  padding: 0px 22px;
   border: 1px solid transparent;
   transition: all linear 0.2s;
 }
@@ -5101,6 +5110,9 @@ html[dir=ltr] .book-details-desc .author-details-item {
   }
   .total-table table {
     margin-bottom: 35px;
+  }
+  .disc-coupon-inpt input {
+    padding: 0px 15px;
   }
 }
 .checkout {
@@ -5317,6 +5329,9 @@ html[dir=ltr] .book-details-desc .author-details-item {
   .checkout-parent {
     grid-template-columns: 1fr;
   }
+  .terms-sec {
+    margin: 40px 0;
+  }
   .checkout .myform .myLabel {
     font-size: 15px;
   }
@@ -5355,8 +5370,8 @@ html[dir=ltr] .book-details-desc .author-details-item {
     justify-content: flex-end;
   }
   .checkout {
-    padding-top: 20px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 70px;
   }
   .terms-sec .checkmark {
     min-height: 22px;
@@ -5479,7 +5494,7 @@ html[dir=ltr] .order-success-content .order-detail-div span {
 @media only screen and (max-width: 767px) {
   .news-page-parent {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 25px;
   }
   .news-page .news-item {
     filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.1));
@@ -5489,7 +5504,7 @@ html[dir=ltr] .order-success-content .order-detail-div span {
     margin-bottom: 30px;
   }
   .news-page {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 80px;
   }
   html[dir=ltr] .news-item .news-item-desc p {
@@ -5835,7 +5850,7 @@ html[dir=ltr] .researches-item .researches-item-title {
     font-size: 15px;
   }
   .researches {
-    padding-top: 20px;
+    padding-top: 25px;
   }
   .researches .title {
     font-size: 20px;
@@ -5846,11 +5861,11 @@ html[dir=ltr] .researches-item .researches-item-title {
     line-height: 1.8;
   }
   .researches .pagination-sec {
-    margin-bottom: 60px;
+    margin-bottom: 65px;
   }
   .inquiry-sec {
     padding: 40px 0px;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
   }
   .inquiry-sec .inquiry-title {
     font-size: 20px;
@@ -6483,7 +6498,7 @@ html[dir=ltr] .title-text {
     margin-top: 20px;
   }
   html[dir=ltr] .title-text {
-    line-height: 1.4;
+    line-height: 1.35;
   }
 }
 .header-box-shadow {
