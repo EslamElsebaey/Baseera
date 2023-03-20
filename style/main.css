@@ -727,8 +727,6 @@ nav .top-header {
   }
   .li-drop .ul-drop li {
     padding-bottom: 0;
-    -webkit-margin-start: 8px;
-            margin-inline-start: 8px;
   }
   .li-drop .ul-drop::after {
     display: none;
@@ -919,8 +917,6 @@ nav .top-header {
   }
   .li-drop .ul-drop li {
     padding-bottom: 0;
-    -webkit-margin-start: 8px;
-            margin-inline-start: 8px;
     margin-bottom: 0px;
   }
   .li-drop .ul-drop::after {
@@ -1085,25 +1081,11 @@ nav .top-header {
   font-size: 14px;
   color: #ffffff;
   font-weight: 700;
-  position: relative;
-  overflow: hidden;
+  transition: all linear 0.2s;
 }
-.main .banner-desc .show-programs-btn::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-.main .banner-desc .show-programs-btn:hover::before {
-  animation: circle 0.75s;
+.main .banner-desc .show-programs-btn:hover {
+  background-color: #18778d;
+  color: #ffffff;
 }
 .main .banner-desc .download-ancor {
   padding: 12px 27px;
@@ -1576,28 +1558,14 @@ button.close i {
 
 .register-now-btn {
   color: #fff;
-  background-color: #18778d;
+  background-color: #a63a50;
   position: relative;
   transform: perspective(1px) translateZ(0);
-}
-.register-now-btn::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: 5px;
-  transform: scaleX(1);
-  transform-origin: 50%;
-  transition-property: transform;
-  transition-duration: 0.3s;
-  background-color: #a63a50;
-  transition-timing-function: linear;
+  transition: all linear 0.2s;
 }
 .register-now-btn:hover {
-  color: #fff;
-}
-.register-now-btn:hover::before {
-  transform: scaleY(0);
+  background-color: #18778d;
+  color: #ffffff;
 }
 
 .img-holder {
@@ -3229,11 +3197,6 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
   margin-bottom: 10px;
 }
 
-.tatweer-sec {
-  -webkit-margin-start: 30px;
-          margin-inline-start: 30px;
-}
-
 .contant-links {
   display: flex;
   align-items: center;
@@ -3393,6 +3356,11 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all linear 0.2s;
+}
+.level-details .register-now:hover {
+  background-color: #18778d;
+  color: #ffffff;
 }
 .level-details .person-details-item {
   padding: 15px;
@@ -3547,36 +3515,58 @@ html[dir=ltr] .qualified-programs .explained-title, html[dir=ltr] .development-p
 .radio-general-input .myLabel {
   margin-bottom: 15px;
 }
-.radio-general-input input[type=radio] {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: #f2f2f2;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-clip: content-box;
-  padding: 1.5px;
-  cursor: pointer;
-}
-.radio-general-input input[type=radio]:checked {
-  background-color: #18778d;
-  border: 2px solid #f2f2f2;
-}
 
 .radio-sec {
   display: grid;
   grid-template-columns: 22px auto;
-}
-.radio-sec label {
-  font-size: 16px;
-  color: #000000;
-  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   margin: 0;
   -webkit-margin-start: 10px;
           margin-inline-start: 10px;
   text-transform: capitalize;
   cursor: pointer;
+}
+.radio-sec .label-text {
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 400;
+}
+.radio-sec input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.radio-sec .radio-checkmark {
+  position: relative;
+  height: 22px;
+  display: block;
+  width: 22px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+.radio-sec .radio-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #18778d;
+}
+
+.radio-sec input:checked ~ .radio-checkmark:after {
+  display: block;
 }
 
 .other-choice {
@@ -3790,6 +3780,11 @@ html[dir=ltr] .teacher-sec label {
   font-size: 20px;
   color: #ffffff;
   font-weight: 700;
+  transition: all linear 0.2s;
+}
+.pay-now-sec .pay-now-btn:hover {
+  background-color: #18778d;
+  color: #ffffff;
 }
 
 .payment-policy {
@@ -3846,7 +3841,8 @@ html[dir=ltr] .payment-policy ul li {
 }
 @media only screen and (max-width: 767px) {
   .conditions-radio .radio-sec {
-    margin-bottom: 13px;
+    margin-bottom: 17px;
+    align-items: flex-start;
   }
   .inputs-parent {
     grid-template-columns: 1fr;
@@ -3876,7 +3872,7 @@ html[dir=ltr] .payment-policy ul li {
   .coupon > span {
     margin-bottom: 12px;
   }
-  .conditions-radio p, .radio-sec label {
+  .conditions-radio p, .radio-sec .label-text {
     font-size: 15px;
   }
   .another-teacher-register .text {
@@ -4043,33 +4039,18 @@ html[dir=ltr] .payment-policy ul li {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color: #18778d;
+  background-color: #a63a50;
   font-size: 20px;
   color: #ffffff;
   font-weight: 700;
   text-align: center;
-  position: relative;
+  transition: all linear 0.2s;
   z-index: 1;
   margin: auto;
 }
-.program-pay .program-pay-btn::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: 5px;
-  transform: scaleX(1);
-  transform-origin: 50%;
-  transition-property: transform;
-  transition-duration: 0.3s;
-  background-color: #a63a50;
-  transition-timing-function: linear;
-}
 .program-pay .program-pay-btn:hover {
-  color: #fff;
-}
-.program-pay .program-pay-btn:hover::before {
-  transform: scaleY(0);
+  background-color: #18778d;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 991px) {
@@ -4169,6 +4150,11 @@ html[dir=ltr] .payment-policy ul li {
   font-weight: 700;
   text-align: center;
   margin: auto;
+  transition: all linear 0.2s;
+}
+.register-success-details .backtohome:hover {
+  background-color: #18778d;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4537,31 +4523,16 @@ html[dir=ltr] .logo-story p {
   padding: 14px 66px;
   min-width: 200px;
   border-radius: 5px;
-  background-color: #18778d;
+  background-color: #a63a50;
   font-size: 18px;
   color: #ffffff;
   position: relative;
   font-weight: 700;
   z-index: 1;
-}
-.book-details-desc .buy-now::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: 5px;
-  transform: scaleX(1);
-  transform-origin: 50%;
-  transition-property: transform;
-  transition-duration: 0.3s;
-  background-color: #a63a50;
-  transition-timing-function: linear;
+  transition: all linear 0.2s;
 }
 .book-details-desc .buy-now:hover {
-  color: #fff;
-}
-.book-details-desc .buy-now:hover::before {
-  transform: scaleY(0);
+  background-color: #18778d;
 }
 
 .offered-books {
@@ -5001,30 +4972,18 @@ html[dir=ltr] .book-details-desc .author-details-item {
   padding: 12px 46px;
   min-width: 182px;
   border-radius: 5px;
-  background-color: #18778d;
+  background-color: #a63a50;
   font-size: 16px;
   color: #ffffff;
   font-weight: 700;
   position: relative;
   z-index: 1;
   overflow: hidden;
-}
-.complete-application-btn::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: 5px;
-  transform: scaleX(1);
-  transform-origin: 50%;
-  background-color: #a63a50;
-  transition: all linear 0.3s;
+  transition: all linear 0.2s;
 }
 .complete-application-btn:hover {
-  color: #fff;
-}
-.complete-application-btn:hover::before {
-  transform: scaleY(0);
+  background-color: #18778d;
+  color: #ffffff;
 }
 
 .cart-basket {
@@ -5303,10 +5262,11 @@ html[dir=ltr] .book-details-desc .author-details-item {
   font-size: 20px;
   color: #ffffff;
   font-weight: 700;
+  transition: all linear 0.2s;
 }
 .confirm-app:hover {
+  background-color: #18778d;
   color: #ffffff;
-  opacity: 0.9;
 }
 
 .rest-of-details-div {
@@ -5434,17 +5394,22 @@ html[dir=ltr] .book-details-desc .author-details-item {
   font-size: 16px;
   color: #ffffff;
   font-weight: 700;
-}
-.order-success-content .buttons a:hover {
-  opacity: 0.9;
+  transition: all linear 0.2s;
 }
 .order-success-content .buttons a.backHome-btn {
   background-color: #a63a50;
   -webkit-margin-start: 10px;
           margin-inline-start: 10px;
 }
+.order-success-content .buttons a.backHome-btn:hover {
+  background-color: #18778d;
+  color: #ffffff;
+}
 .order-success-content .buttons a.print-invoice-btn {
   background-color: #eca766;
+}
+.order-success-content .buttons a.print-invoice-btn:hover {
+  opacity: 0.9;
 }
 
 html[dir=ltr] .order-success-content .order-detail-div span {
@@ -5602,28 +5567,11 @@ html[dir=ltr] .order-success-content .order-detail-div span {
   font-size: 14px;
   color: #ffffff;
   font-weight: 700;
-  overflow: hidden;
-  position: relative;
-}
-.resources-parent .buyitNow::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  transition: all linear 0.2s;
 }
 .resources-parent .buyitNow:hover {
-  color: #fff;
-}
-.resources-parent .buyitNow:hover::before {
-  animation: circle 0.75s;
+  background-color: #18778d;
+  color: #ffffff;
 }
 
 @keyframes circle {
@@ -5794,28 +5742,11 @@ html[dir=ltr] .order-success-content .order-detail-div span {
   background-color: #a63a50;
   padding: 14px 62px;
   min-width: 220px;
-  position: relative;
-  overflow: hidden;
-}
-.inquiry-sec .callUsNow::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  transition: all linear 0.2s;
 }
 .inquiry-sec .callUsNow:hover {
-  color: #fff;
-}
-.inquiry-sec .callUsNow:hover::before {
-  animation: circle 0.75s;
+  background-color: #18778d;
+  color: #ffffff;
 }
 
 html[dir=ltr] .researches .researches-para {
@@ -6010,28 +5941,11 @@ html[dir=ltr] .researches-item .researches-item-title {
   font-weight: 700;
   padding: 10.5px 46px;
   min-width: 133px;
-  position: relative;
-  overflow: hidden;
-}
-.inquiry-form .inquiry-send-btn::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  transition: all linear 0.2s;
 }
 .inquiry-form .inquiry-send-btn:hover {
-  color: #fff;
-}
-.inquiry-form .inquiry-send-btn:hover::before {
-  animation: circle 0.75s;
+  background-color: #18778d;
+  color: #ffffff;
 }
 .inquiry-form .inquiry-send-div {
   text-align: center;

@@ -40,6 +40,11 @@
         font-weight: 700;
         text-align: center;
         margin: auto;
+        transition: all linear .2s;
+        &:hover{
+            background-color: $main-color;
+            color: #ffffff;
+        }
     }
 
 }

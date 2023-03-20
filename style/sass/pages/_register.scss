@@ -55,35 +55,61 @@
     .myLabel{
         margin-bottom: 15px;
     }
-    input[type="radio"] {
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        background-color: #f2f2f2;
-        appearance: none;
-        background-clip: content-box;
-        padding: 1.5px;
-        cursor: pointer;
-    }
-    input[type="radio"]:checked {
-        background-color: $main-color;
-        border: 2px solid #f2f2f2 ;
-    }
 }
 
 .radio-sec{
-  display: grid;
-  grid-template-columns: 22px auto;
-    label {
+    display: grid;
+    grid-template-columns: 22px auto;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+    margin-inline-start: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    .label-text{
+        margin-inline-start: 10px;
         font-size: 16px;
         color: #000000;
         font-weight: 400;
-        margin: 0;
-        margin-inline-start: 10px;
-        text-transform: capitalize;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
         cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    .radio-checkmark{
+        position: relative;
+        height: 22px;
+        display: block;
+        width: 22px;
+        background-color: #f2f2f2;
+        border-radius: 50%;
+        &::after{
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+           transform: translate(-50% , -50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: $main-color;
+        }
     }
 }
+.radio-sec input:checked ~ .radio-checkmark:after {
+    display: block;
+  }
+
+
+
+
+
+
 
 .other-choice{
     // padding-top: 20px;
@@ -304,6 +330,11 @@ html[dir="ltr"]{
         font-size: 20px;
         color: #ffffff;
         font-weight: 700;
+        transition: all linear .2s;
+        &:hover{
+            background-color: $main-color;
+            color: #ffffff;
+        }
         // text-transform: capitalize;
     }
 }
@@ -367,7 +398,8 @@ html[dir="ltr"]{
 
 @include max-768{
     .conditions-radio .radio-sec{
-        margin-bottom: 13px;
+        margin-bottom: 17px;
+        align-items: flex-start;
     }
     .inputs-parent{
         grid-template-columns: 1fr;
@@ -396,7 +428,7 @@ html[dir="ltr"]{
     .coupon > span{
         margin-bottom: 12px;
     }
-    .conditions-radio p , .radio-sec label{
+    .conditions-radio p , .radio-sec .label-text{
         font-size: 15px;
     }
     .another-teacher-register .text{

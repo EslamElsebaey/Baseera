@@ -47,27 +47,10 @@
         font-size: 14px;
         color: #ffffff;
         font-weight: 700;
-        position: relative;
-        overflow: hidden;
-        &::before{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 2;
-            display: block;
-            content: '';
-            width: 0;
-            height: 0;
-            background: rgba(255,255,255,.2);
-            border-radius: 100%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            opacity: 0;
-        }
+        transition: all linear .2s;
         &:hover{
-                &::before{
-                    animation: circle .75s;
-                }
+            background-color: $main-color;
+            color: #ffffff;
         }
     }
     .download-ancor{
@@ -579,27 +562,13 @@ button.close{
 }
 .register-now-btn{
     color: #fff;
-    background-color: $main-color;
+    background-color: $second-color;
     position: relative;
     transform: perspective(1px) translateZ(0);
-    &::before{
-        content: "";
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        border-radius: 5px;
-        transform: scaleX(1);
-        transform-origin: 50%;
-        transition-property: transform;
-        transition-duration: 0.3s;
-        background-color:$second-color;
-        transition-timing-function: linear;
-    }
+    transition: all linear .2s;
     &:hover{
-        &::before{
-            transform: scaleY(0);
-        }
-      color: #fff;
+        background-color: $main-color;
+       color: #ffffff;
     }
 }
 
