@@ -6234,17 +6234,20 @@ html[dir=ltr] .send i {
 .social a {
   -webkit-margin-end: 25px;
           margin-inline-end: 25px;
+  max-width: 25px;
+  max-height: 100%;
 }
 .social a:focus {
   text-decoration: none;
 }
-.social a:hover i {
-  color: #fff;
+.social a:hover img {
+  opacity: 1;
 }
-.social i {
-  font-size: 24px;
-  color: #80cee0;
+.social a img {
+  max-width: 100%;
+  max-height: 100%;
   transition: all linear 0.2s;
+  opacity: 0.6;
 }
 .social a:last-of-type {
   -webkit-margin-end: 0;
