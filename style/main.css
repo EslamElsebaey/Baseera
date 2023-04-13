@@ -681,6 +681,14 @@ nav .top-header {
   transition: all linear 0.3s;
 }
 
+.account-text:hover .account-details {
+  opacity: 1;
+  visibility: visible;
+}
+.account-text:hover .account-btn i, .account-text:hover .account-btn span {
+  color: #18778d;
+}
+
 .show-account-details {
   opacity: 1;
   visibility: visible;
@@ -1013,13 +1021,6 @@ nav .top-header {
   }
   .open-search-btn {
     display: none;
-  }
-  .account-text:hover .account-details {
-    opacity: 1;
-    visibility: visible;
-  }
-  .account-text:hover .account-btn i, .account-text:hover .account-btn span {
-    color: #18778d;
   }
 }
 @media only screen and (min-width: 768px) {

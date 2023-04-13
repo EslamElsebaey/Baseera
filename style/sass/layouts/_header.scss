@@ -425,6 +425,18 @@ transition: all linear .3s;
 }
 
 
+.account-text{
+    &:hover{
+        .account-details{
+            opacity: 1;
+            visibility: visible;
+        }
+        .account-btn i , .account-btn span {
+            color: $main-color;
+        }
+    }
+  }
+
 
 
 .show-account-details  {
@@ -757,6 +769,7 @@ html[dir ="ltr"]{
     }
 }
 
+
 .search-item input{
     height: 40px;
     width: 100%;
@@ -807,17 +820,7 @@ html[dir="ltr"]{
     .open-search-btn{
         display: none;
     }
-    .account-text{
-        &:hover{
-            .account-details{
-                opacity: 1;
-                visibility: visible;
-            }
-            .account-btn i , .account-btn span {
-                color: $main-color;
-            }
-        }
-      }
+   
   }
 
 @include min-768 {

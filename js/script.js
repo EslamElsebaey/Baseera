@@ -339,13 +339,13 @@ $(".cart").click(function(){
 
 
 
-if($(window).width()  < 992 ) {
-  $(".account-btn").click(function(){
-    $(".account-details").toggleClass("show-account-details");
-    $(this).toggleClass("account-btn-color");
-    $(this).children(".la-user").toggleClass("user-color");
-  })
-}
+// if($(window).width()  < 992 ) {
+//   $(".account-btn").click(function(){
+//     $(".account-details").toggleClass("show-account-details");
+//     $(this).toggleClass("account-btn-color");
+//     $(this).children(".la-user").toggleClass("user-color");
+//   })
+// }
 
 
 
