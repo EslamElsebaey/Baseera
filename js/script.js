@@ -1,13 +1,10 @@
 
 
+$(window).on("load", function () {
+  $(".preloader").fadeOut();
+})
+
 $(document).ready(function(){
-     // preloader
-      $(".preloader").addClass("preloader-hidden")
-    
-
-
-
-   
 
 /************************************************************************************************** */
 
