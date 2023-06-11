@@ -151,23 +151,7 @@ html[dir="ltr"]{
     }
 }
 
-@include min-768 {
-    .inquiry-form{
-        .mycontainer{
-            max-width: 720px;
-            margin: auto;
-        }
-    }
-}
-@include min-992 {
-    .inquiry-form{
-        .mycontainer{
-            max-width: 960px;
-            margin: auto;
-        }
-    }
-   
-}
+
 
 @include min-1200{
     .inquiry-form{
@@ -180,6 +164,9 @@ html[dir="ltr"]{
 
 
 @include max-1200{
+    .myform .myInput{
+        width: 100%;
+    }
     html[dir="ltr"]{
         .contact-parent .contact-item .contact-item-text{
             line-height: 1.3;

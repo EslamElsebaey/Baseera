@@ -128,6 +128,8 @@ img {
 }
 .ancor-btn:focus {
   text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 ::-webkit-scrollbar {
@@ -700,18 +702,8 @@ nav .top-header {
   color: #18778d;
 }
 
-.show-account-details {
-  opacity: 1;
-  visibility: visible;
-}
-
 .nav-arrow-rotate::after {
   transform: translateY(-50%) rotate(180deg) !important;
-}
-
-.show-account-details {
-  opacity: 1;
-  visibility: visible;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -958,9 +950,6 @@ nav .top-header {
   }
   .icon-rotate::after {
     transform: rotate(180deg) !important;
-  }
-  .user-color {
-    color: #18778d !important;
   }
   .logo .baseera-logo {
     height: 55px;
@@ -5983,24 +5972,15 @@ html[dir=ltr] .contact-parent .contact-item {
     margin: auto;
   }
 }
-@media only screen and (min-width: 768px) {
-  .inquiry-form .mycontainer {
-    max-width: 720px;
-    margin: auto;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .inquiry-form .mycontainer {
-    max-width: 960px;
-    margin: auto;
-  }
-}
 @media only screen and (min-width: 1200px) {
   .inquiry-form .mycontainer {
     max-width: 465px;
   }
 }
 @media only screen and (max-width: 1199px) {
+  .myform .myInput {
+    width: 100%;
+  }
   html[dir=ltr] .contact-parent .contact-item .contact-item-text {
     line-height: 1.3;
     height: 46.8px;

@@ -288,8 +288,6 @@ closeBtn.addEventListener("click" , function(){
 openBtn.addEventListener("click" , function(){
   $("nav").addClass("open-nav");  
   $("body").addClass("body-overflow-hidden");
-  $(".account-details").removeClass("show-account-details");
-  $(".account-btn").children(".la-user").removeClass("user-color");
 })
 
 
@@ -320,29 +318,14 @@ $(".toTop").click(function(){
 
 
 $(".open-search-btn").click(function(){
-  $(".account-details").removeClass("show-account-details");
-  $(".account-btn").children(".la-user").removeClass("user-color");
   $(".search").slideToggle(300);
   $(this).children().toggleClass("la-times");
 })
 
 
-$(".cart").click(function(){
-  $(".account-details").removeClass("show-account-details");
-  $(".account-btn").children(".la-user").removeClass("user-color");
-})
 
 
 
-
-
-// if($(window).width()  < 992 ) {
-//   $(".account-btn").click(function(){
-//     $(".account-details").toggleClass("show-account-details");
-//     $(this).toggleClass("account-btn-color");
-//     $(this).children(".la-user").toggleClass("user-color");
-//   })
-// }
 
 
 
@@ -401,8 +384,6 @@ $(".pagination-sec-parent a").click(function(e){
       if ($(window).scrollTop() > 150) {
           $("header").addClass("fixed");
           $(".open-search-btn i").removeClass("la-times") ;
-          $(".account-details").removeClass("show-account-details");
-          $(".account-btn").children(".la-user").removeClass("user-color");
           if($(window).width() > 768){
             $(".main-nav").addClass("main-nav-scroll");
           } 
@@ -419,9 +400,6 @@ $(".pagination-sec-parent a").click(function(e){
           }
           
       } else {
-          // if( $(window).scrollTop() == 0 ) {
-          //   $(".search").show();
-          // }
           $("header").removeClass("fixed");
           $("header").removeClass("header-box-shadow");
           if($(window).width() > 768){
@@ -507,21 +485,29 @@ $(".product-counter .minus").click(function(){
 })
 
 
+
+
 // fire select2
-$('.myselect').select2();
 
-
-
-// cancel search 
-$('.inquiry-form select').select2({
-  minimumResultsForSearch: -1
-});
-
-// select arrow rotate
-
+if($('.myselect').length > 0){
+  $('.myselect').select2();
+  // select arrow rotate
 $(".select2-selection").click(function(){
   $(".select2-selection--single").toggleClass("rotate-select-icon");
  })
+
+ // cancel search 
+$('.inquiry-form select').select2({
+  minimumResultsForSearch: -1
+});
+}
+
+
+
+
+
+
+
 
 
 })  // end of document ready

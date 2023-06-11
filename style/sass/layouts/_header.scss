@@ -439,20 +439,11 @@ transition: all linear .3s;
 
 
 
-.show-account-details  {
-opacity: 1 ;
-visibility: visible ;
-}
 
 .nav-arrow-rotate::after {
 transform:  translateY(-50%) rotate(180deg)  !important;
 }
 
-
-.show-account-details  {
-    opacity: 1 ;
-    visibility: visible ;
-}
 
 
 @include max-1200{
@@ -718,10 +709,7 @@ transform:  translateY(-50%) rotate(180deg)  !important;
         .icon-rotate::after{
             transform:  rotate(180deg)  !important;
         }
-
-        .user-color {
-            color: $main-color !important;
-        }
+       
         .logo .baseera-logo{
             height: 55px;
         }
